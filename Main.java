@@ -37,12 +37,9 @@ class ServerThread extends Thread {
 		for (long i = 0; i < filesize; ++i){
 			int a = is.read();
 			fos.write(a);
-			System.out.println(a);
 		}
-		System.out.println("已接收 " + filesize + " 个字节");
 		is.close();
 		fos.close();
-		System.out.println("finished");
 		socket.close();
 	  }catch(Exception e){
 		  e.printStackTrace();

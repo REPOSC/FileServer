@@ -38,11 +38,9 @@ class ServerThread2 extends Thread {
 		byte []bytes = new byte[(int)file.length()];		
 		fis.read(bytes);
 		os.write(bytes);
-		System.out.println("已发送 " + bytes.length + " 个字节");
 		is.close();
 		fis.close();
 		os.close();
-		System.out.println("finished");
 	  }catch(Exception e){
 		  e.printStackTrace();
 	  }
